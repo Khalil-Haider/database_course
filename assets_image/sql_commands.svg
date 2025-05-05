@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="700" viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for reusable elements -->
+  <defs>
+    <!-- Background grid pattern -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e0e5ee" stroke-width="0.5"/>
+    </pattern>
+    
+    <!-- Gradients -->
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6441A5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a0845;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Command box gradients -->
+    <linearGradient id="ddlGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4286f4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#373B44;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="dqlGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="dmlGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f12711;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5af19;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="dclGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8E2DE2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A00E0;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="tclGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF416C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF4B2B;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Command Icon -->
+    <symbol id="command-icon" viewBox="0 0 50 50">
+      <rect x="5" y="5" width="40" height="40" rx="5" ry="5" fill="#fff" stroke="#333" stroke-width="1.5"/>
+      <rect x="10" y="15" width="30" height="5" rx="2" ry="2" fill="#eee" stroke="#333" stroke-width="1"/>
+      <rect x="10" y="25" width="20" height="5" rx="2" ry="2" fill="#eee" stroke="#333" stroke-width="1"/>
+      <rect x="10" y="35" width="25" height="5" rx="2" ry="2" fill="#eee" stroke="#333" stroke-width="1"/>
+    </symbol>
+    
+    <!-- SQL Database Icon -->
+    <symbol id="db-icon" viewBox="0 0 60 60">
+      <ellipse cx="30" cy="15" rx="25" ry="10" fill="#5d6d7e" stroke="#34495e" stroke-width="1.5"/>
+      <rect x="5" y="15" width="50" height="30" fill="#5d6d7e" stroke="#34495e" stroke-width="0"/>
+      <ellipse cx="30" cy="45" rx="25" ry="10" fill="#5d6d7e" stroke="#34495e" stroke-width="1.5"/>
+      <text x="30" y="19" font-size="11" font-weight="bold" text-anchor="middle" fill="white" font-family="monospace">SQL</text>
+      <line x1="15" y1="26" x2="45" y2="26" stroke="white" stroke-width="0.8"/>
+      <line x1="15" y1="32" x2="45" y2="32" stroke="white" stroke-width="0.8"/>
+      <line x1="15" y1="38" x2="45" y2="38" stroke="white" stroke-width="0.8"/>
+    </symbol>
+    
+    <!-- DDL Icon -->
+    <symbol id="ddl-icon" viewBox="0 0 40 40">
+      <rect x="5" y="5" width="30" height="30" rx="5" ry="5" fill="#3498db" stroke="#2980b9" stroke-width="1.5"/>
+      <rect x="10" y="10" width="20" height="5" rx="1" ry="1" fill="white" stroke="#2980b9" stroke-width="0.5"/>
+      <rect x="10" y="18" width="15" height="5" rx="1" ry="1" fill="white" stroke="#2980b9" stroke-width="0.5"/>
+      <rect x="10" y="26" width="20" height="5" rx="1" ry="1" fill="white" stroke="#2980b9" stroke-width="0.5"/>
+    </symbol>
+    
+    <!-- DQL Icon -->
+    <symbol id="dql-icon" viewBox="0 0 40 40">
+      <rect x="5" y="5" width="30" height="30" rx="5" ry="5" fill="#2ecc71" stroke="#27ae60" stroke-width="1.5"/>
+      <circle cx="13" cy="15" r="3" fill="white" stroke="#27ae60" stroke-width="0.5"/>
+      <circle cx="13" cy="25" r="3" fill="white" stroke="#27ae60" stroke-width="0.5"/>
+      <line x1="20" y1="15" x2="30" y2="15" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      <line x1="20" y1="25" x2="30" y2="25" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    
+    <!-- DML Icon -->
+    <symbol id="dml-icon" viewBox="0 0 40 40">
+      <rect x="5" y="5" width="30" height="30" rx="5" ry="5" fill="#e74c3c" stroke="#c0392b" stroke-width="1.5"/>
+      <line x1="15" y1="15" x2="25" y2="25" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      <line x1="25" y1="15" x2="15" y2="25" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      <rect x="13" y="18" width="14" height="4" fill="white"/>
+    </symbol>
+    
+    <!-- DCL Icon -->
+    <symbol id="dcl-icon" viewBox="0 0 40 40">
+      <rect x="5" y="5" width="30" height="30" rx="5" ry="5" fill="#9b59b6" stroke="#8e44ad" stroke-width="1.5"/>
+      <circle cx="20" cy="15" r="5" fill="white" stroke="#8e44ad" stroke-width="0.5"/>
+      <path d="M12 30 L28 30 L28 22 C28 17 12 17 12 22 Z" fill="white" stroke="#8e44ad" stroke-width="0.5"/>
+    </symbol>
+    
+    <!-- TCL Icon -->
+    <symbol id="tcl-icon" viewBox="0 0 40 40">
+      <rect x="5" y="5" width="30" height="30" rx="5" ry="5" fill="#e67e22" stroke="#d35400" stroke-width="1.5"/>
+      <circle cx="20" cy="20" r="8" fill="white" stroke="#d35400" stroke-width="0.5"/>
+      <path d="M20 14 L20 20 L24 24" fill="none" stroke="#d35400" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="20" cy="20" r="2" fill="#d35400"/>
+    </symbol>
+    
+    <!-- Connector -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+    
+    <!-- Shadow effect -->
+    <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="900" height="700" fill="#f8fafc"/>
+  <rect width="900" height="700" fill="url(#grid)"/>
+  
+  <!-- Header section -->
+  <rect x="0" y="0" width="900" height="100" fill="url(#headerGradient)" filter="url(#drop-shadow)"/>
+  <use href="#db-icon" x="80" y="20" width="60" height="60"/>
+  <text x="450" y="60" font-size="32" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">SQL COMMAND TYPES</text>
+  
+  <!-- Main SQL Command Box -->
+  <rect x="50" y="120" width="800" height="80" rx="10" ry="10" fill="#34495e" filter="url(#drop-shadow)"/>
+  <text x="450" y="170" font-size="28" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">STRUCTURED QUERY LANGUAGE (SQL)</text>
+  
+  <!-- SQL Command Categories -->
+  <g id="command-categories">
+    <!-- DDL -->
+    <rect x="60" y="230" width="140" height="60" rx="10" ry="10" fill="url(#ddlGradient)" filter="url(#drop-shadow)"/>
+    <use href="#ddl-icon" x="80" y="240" width="40" height="40"/>
+    <text x="130" y="265" font-size="18" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">DDL</text>
+    <text x="130" y="300" font-size="12" text-anchor="middle" fill="#333" font-family="Arial">Data Definition Language</text>
+    
+    <!-- DQL -->
+    <rect x="220" y="230" width="140" height="60" rx="10" ry="10" fill="url(#dqlGradient)" filter="url(#drop-shadow)"/>
+    <use href="#dql-icon" x="240" y="240" width="40" height="40"/>
+    <text x="290" y="265" font-size="18" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">DQL</text>
+    <text x="290" y="300" font-size="12" text-anchor="middle" fill="#333" font-family="Arial">Data Query Language</text>
+    
+    <!-- DML -->
+    <rect x="380" y="230" width="140" height="60" rx="10" ry="10" fill="url(#dmlGradient)" filter="url(#drop-shadow)"/>
+    <use href="#dml-icon" x="400" y="240" width="40" height="40"/>
+    <text x="450" y="265" font-size="18" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">DML</text>
+    <text x="450" y="300" font-size="12" text-anchor="middle" fill="#333" font-family="Arial">Data Manipulation Language</text>
+    
+    <!-- DCL -->
+    <rect x="540" y="230" width="140" height="60" rx="10" ry="10" fill="url(#dclGradient)" filter="url(#drop-shadow)"/>
+    <use href="#dcl-icon" x="560" y="240" width="40" height="40"/>
+    <text x="610" y="265" font-size="18" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">DCL</text>
+    <text x="610" y="300" font-size="12" text-anchor="middle" fill="#333" font-family="Arial">Data Control Language</text>
+    
+    <!-- TCL -->
+    <rect x="700" y="230" width="140" height="60" rx="10" ry="10" fill="url(#tclGradient)" filter="url(#drop-shadow)"/>
+    <use href="#tcl-icon" x="720" y="240" width="40" height="40"/>
+    <text x="770" y="265" font-size="18" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">TCL</text>
+    <text x="770" y="300" font-size="12" text-anchor="middle" fill="#333" font-family="Arial">Transaction Control Language</text>
+  </g>
+  
+  <!-- Connectors -->
+  <line x1="130" y1="200" x2="130" y2="230" stroke="#4286f4" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="290" y1="200" x2="290" y2="230" stroke="#11998e" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="200" x2="450" y2="230" stroke="#f12711" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="610" y1="200" x2="610" y2="230" stroke="#8E2DE2" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="770" y1="200" x2="770" y2="230" stroke="#FF416C" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Command Stacks -->
+  <!-- DDL Commands -->
+  <g id="ddl-commands">
+    <rect x="60" y="340" width="140" height="60" rx="8" ry="8" fill="#3498db" stroke="#2980b9" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="130" y="380" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">CREATE</text>
+    
+    <rect x="60" y="410" width="140" height="60" rx="8" ry="8" fill="#3498db" stroke="#2980b9" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="130" y="450" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">ALTER</text>
+    
+    <rect x="60" y="480" width="140" height="60" rx="8" ry="8" fill="#3498db" stroke="#2980b9" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="130" y="520" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">RENAME</text>
+    
+    <rect x="60" y="550" width="140" height="60" rx="8" ry="8" fill="#3498db" stroke="#2980b9" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="130" y="590" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">TRUNCATE</text>
+    
+    <rect x="60" y="620" width="140" height="60" rx="8" ry="8" fill="#3498db" stroke="#2980b9" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="130" y="660" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">DROP</text>
+    
+    <line x1="130" y1="290" x2="130" y2="340" stroke="#2980b9" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- DQL Commands -->
+  <g id="dql-commands">
+    <rect x="220" y="340" width="140" height="60" rx="8" ry="8" fill="#2ecc71" stroke="#27ae60" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="290" y="380" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">SELECT</text>
+    
+    <line x1="290" y1="290" x2="290" y2="340" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- DML Commands -->
+  <g id="dml-commands">
+    <rect x="380" y="340" width="140" height="60" rx="8" ry="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="450" y="380" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">INSERT</text>
+    
+    <rect x="380" y="410" width="140" height="60" rx="8" ry="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="450" y="450" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">UPDATE</text>
+    
+    <rect x="380" y="480" width="140" height="60" rx="8" ry="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="450" y="520" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">DELETE</text>
+    
+    <line x1="450" y1="290" x2="450" y2="340" stroke="#c0392b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- DCL Commands -->
+  <g id="dcl-commands">
+    <rect x="540" y="340" width="140" height="60" rx="8" ry="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="610" y="380" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">GRANT</text>
+    
+    <rect x="540" y="410" width="140" height="60" rx="8" ry="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="610" y="450" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">REVOKE</text>
+    
+    <line x1="610" y1="290" x2="610" y2="340" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- TCL Commands -->
+  <g id="tcl-commands">
+    <rect x="700" y="340" width="140" height="60" rx="8" ry="8" fill="#e67e22" stroke="#d35400" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="770" y="380" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">START TRANSACTION</text>
+    
+    <rect x="700" y="410" width="140" height="60" rx="8" ry="8" fill="#e67e22" stroke="#d35400" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="770" y="450" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">COMMIT</text>
+    
+    <rect x="700" y="480" width="140" height="60" rx="8" ry="8" fill="#e67e22" stroke="#d35400" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="770" y="520" font-size="16" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">ROLLBACK</text>
+    
+    <line x1="770" y1="290" x2="770" y2="340" stroke="#d35400" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- Brief descriptions at bottom -->
+  <rect x="50" y="700" width="800" height="30" rx="5" ry="5" fill="#34495e" filter="url(#drop-shadow)"/>
+  <text x="450" y="720" font-size="14" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial">SQL COMMANDS HELP DEFINE, QUERY, MANIPULATE, CONTROL, AND MANAGE DATABASE TRANSACTIONS</text>
+</svg>
