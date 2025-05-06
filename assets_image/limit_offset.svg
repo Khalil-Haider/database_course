@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000">
+  <!-- Definitions for reusable elements -->
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="limitGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="offsetGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#16a34a" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+    <linearGradient id="orderByGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <linearGradient id="warningGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#be185d" />
+      <stop offset="100%" stop-color="#db2777" />
+    </linearGradient>
+    <linearGradient id="noteGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4b5563" />
+      <stop offset="100%" stop-color="#6b7280" />
+    </linearGradient>
+    
+    <!-- Shadows and effects -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3" />
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="1000" fill="#f8fafc" rx="10" ry="10" />
+  
+  <!-- Header -->
+  <g transform="translate(450, 60)">
+    <text font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="url(#headerGradient)" filter="url(#glow)">
+      Understanding LIMIT  OFFSET in SQL
+    </text>
+    <rect x="-350" y="15" width="700" height="4" rx="2" ry="2" fill="url(#headerGradient)" />
+    <text font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#64748b">
+      <tspan x="0" y="45">Control which rows are returned from your query results</tspan>
+    </text>
+  </g>
+  
+  <!-- Code block showing syntax -->
+  <g transform="translate(450, 150)">
+    <rect x="-380" y="-25" width="760" height="120" rx="8" ry="8" fill="#1e293b" filter="url(#dropShadow)" />
+    <text font-family="Consolas, monospace" font-size="18" text-anchor="start" fill="#e2e8f0">
+      <tspan x="-360" y="0">SELECT column1, column2, ... FROM table_name</tspan>
+      <tspan x="-360" y="30">[WHERE condition]</tspan>
+      <tspan x="-360" y="60">[ORDER BY column1, column2, ... [ASC|DESC]]</tspan>
+      <tspan x="-360" y="90">[LIMIT {count | ALL}] [OFFSET start]</tspan>
+    </text>
+  </g>
+  
+  <!-- Divider Line -->
+  <line x1="50" y1="550" x2="850" y2="550" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Section 1: Basic LIMIT - Top Left -->
+  <g transform="translate(225, 300)">
+    <!-- Panel background -->
+    <rect x="-180" y="-40" width="360" height="240" rx="10" ry="10" fill="white" stroke="#cbd5e1" stroke-width="2" filter="url(#dropShadow)" />
+    
+    <!-- Section header -->
+    <rect x="-180" y="-40" width="360" height="50" rx="10" ry="10" fill="url(#limitGradient)" />
+    <text font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="white">
+      <tspan x="0" y="-10">Basic LIMIT</tspan>
+    </text>
+    
+    <!-- Table with LIMIT -->
+    <g transform="translate(0, 80)">
+      <!-- Table structure -->
+      <rect x="-150" y="-50" width="300" height="170" rx="5" ry="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1" />
+      
+      <!-- Table header -->
+      <rect x="-150" y="-50" width="300" height="30" rx="5" ry="5" fill="#bfdbfe" />
+      <line x1="-50" y1="-50" x2="-50" y2="120" stroke="#94a3b8" />
+      <line x1="50" y1="-50" x2="50" y2="120" stroke="#94a3b8" />
+      
+      <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#1e3a8a">
+        <tspan x="-100" y="-30">ID</tspan>
+        <tspan x="0" y="-30">Name</tspan>
+        <tspan x="100" y="-30">Score</tspan>
+      </text>
+      
+      <!-- Table rows - First 5 rows, first 3 highlighted -->
+      <g>
+        <!-- Row lines -->
+        <line x1="-150" y1="-20" x2="150" y2="-20" stroke="#94a3b8" />
+        <line x1="-150" y1="10" x2="150" y2="10" stroke="#94a3b8" />
+        <line x1="-150" y1="40" x2="150" y2="40" stroke="#94a3b8" />
+        <line x1="-150" y1="70" x2="150" y2="70" stroke="#94a3b8" />
+        <line x1="-150" y1="100" x2="150" y2="100" stroke="#94a3b8" />
+        
+        <!-- Highlighted rows (LIMIT 3) -->
+        <rect x="-150" y="-20" width="300" height="30" fill="#3b82f6" fill-opacity="0.2" />
+        <rect x="-150" y="10" width="300" height="30" fill="#3b82f6" fill-opacity="0.2" />
+        <rect x="-150" y="40" width="300" height="30" fill="#3b82f6" fill-opacity="0.2" />
+        
+        <!-- Row data -->
+        <text font-family="Arial, sans-serif" font-size="14" text-anchor="middle">
+          <!-- IDs -->
+          <tspan x="-100" y="-2" fill="#1e3a8a">1</tspan>
+          <tspan x="-100" y="28" fill="#1e3a8a">2</tspan>
+          <tspan x="-100" y="58" fill="#1e3a8a">3</tspan>
+          <tspan x="-100" y="88" fill="#94a3b8">4</tspan>
+          <tspan x="-100" y="118" fill="#94a3b8">5</tspan>
+          
+          <!-- Names -->
+          <tspan x="0" y="-2" fill="#1e3a8a">Alice</tspan>
+          <tspan x="0" y="28" fill="#1e3a8a">Bob</tspan>
+          <tspan x="0" y="58" fill="#1e3a8a">Charlie</tspan>
+          <tspan x="0" y="88" fill="#94a3b8">David</tspan>
+          <tspan x="0" y="118" fill="#94a3b8">Emma</tspan>
+          
+          <!-- Scores -->
+          <tspan x="100" y="-2" fill="#1e3a8a">95</tspan>
+          <tspan x="100" y="28" fill="#1e3a8a">87</tspan>
+          <tspan x="100" y="58" fill="#1e3a8a">92</tspan>
+          <tspan x="100" y="88" fill="#94a3b8">78</tspan>
+          <tspan x="100" y="118" fill="#94a3b8">85</tspan>
+        </text>
+      </g>
+      
+      <!-- LIMIT indicator -->
+      <g transform="translate(185, 30)">
+        <!-- Funnel visual -->
+        <path d="M -30,-50 L 40,-40 L 20,0 L -30,0 L -30,-60 Z" fill="#3b82f6" opacity="0.9" />
+        <path d="M -20,0 L 20,0 L 10,50 L -10,50 L -20,0 Z" fill="#3b82f6" opacity="0.7" />
+        
+        <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+          <tspan x="0" y="-15">LIMIT 3</tspan>
+        </text>
+      </g>
+    </g>
+    
+    <!-- SQL code -->
+    <rect x="-160" y="208" width="320" height="30" rx="5" ry="5" fill="#1e293b" />
+    <text font-family="Consolas, monospace" font-size="14" text-anchor="middle" fill="#e2e8f0">
+      <tspan x="0" y="228">SELECT * FROM students LIMIT 3;</tspan>
+    </text>
+  </g>
+  
+  <!-- Section 2: LIMIT with OFFSET - Top Right -->
+  <g transform="translate(675, 300)">
+    <!-- Panel background -->
+    <rect x="-180" y="-40" width="360" height="240" rx="10" ry="10" fill="white" stroke="#cbd5e1" stroke-width="2" filter="url(#dropShadow)" />
+    
+    <!-- Section header -->
+    <rect x="-180" y="-40" width="360" height="50" rx="10" ry="10" fill="url(#offsetGradient)" />
+    <text font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="white">
+      <tspan x="0" y="-10">LIMIT with OFFSET</tspan>
+    </text>
+    
+    <!-- Table with OFFSET -->
+    <g transform="translate(0, 80)">
+      <!-- Table structure -->
+      <rect x="-150" y="-50" width="300" height="170" rx="5" ry="5" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1" />
+      
+      <!-- Table header -->
+      <rect x="-150" y="-50" width="300" height="30" rx="5" ry="5" fill="#bbf7d0" />
+      <line x1="-50" y1="-50" x2="-50" y2="120" stroke="#94a3b8" />
+      <line x1="50" y1="-50" x2="50" y2="120" stroke="#94a3b8" />
+      
+      <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#166534">
+        <tspan x="-100" y="-30">ID</tspan>
+        <tspan x="0" y="-30">Name</tspan>
+        <tspan x="100" y="-30">Score</tspan>
+      </text>
+      
+      <!-- Table rows - First 2 skipped, next 3 highlighted -->
+      <g>
+        <!-- Row lines -->
+        <line x1="-150" y1="-20" x2="150" y2="-20" stroke="#94a3b8" />
+        <line x1="-150" y1="10" x2="150" y2="10" stroke="#94a3b8" />
+        <line x1="-150" y1="40" x2="150" y2="40" stroke="#94a3b8" />
+        <line x1="-150" y1="70" x2="150" y2="70" stroke="#94a3b8" />
+        <line x1="-150" y1="100" x2="150" y2="100" stroke="#94a3b8" />
+        
+        <!-- Skipped rows (OFFSET 2) -->
+        <rect x="-150" y="-20" width="300" height="30" fill="#e2e8f0" fill-opacity="0.3" />
+        <rect x="-150" y="10" width="300" height="30" fill="#e2e8f0" fill-opacity="0.3" />
+        
+        <!-- Highlighted rows (LIMIT 3) -->
+        <rect x="-150" y="40" width="300" height="30" fill="#22c55e" fill-opacity="0.2" />
+        <rect x="-150" y="70" width="300" height="30" fill="#22c55e" fill-opacity="0.2" />
+        <rect x="-150" y="100" width="300" height="30" fill="#22c55e" fill-opacity="0.2" />
+        
+        <!-- Row data -->
+        <text font-family="Arial, sans-serif" font-size="14" text-anchor="middle">
+          <!-- IDs -->
+          <tspan x="-100" y="-2" fill="#94a3b8">1</tspan>
+          <tspan x="-100" y="28" fill="#94a3b8">2</tspan>
+          <tspan x="-100" y="58" fill="#166534">3</tspan>
+          <tspan x="-100" y="88" fill="#166534">4</tspan>
+          <tspan x="-100" y="118" fill="#166534">5</tspan>
+          
+          <!-- Names -->
+          <tspan x="0" y="-2" fill="#94a3b8">Alice</tspan>
+          <tspan x="0" y="28" fill="#94a3b8">Bob</tspan>
+          <tspan x="0" y="58" fill="#166534">Charlie</tspan>
+          <tspan x="0" y="88" fill="#166534">David</tspan>
+          <tspan x="0" y="118" fill="#166534">Emma</tspan>
+          
+          <!-- Scores -->
+          <tspan x="100" y="-2" fill="#94a3b8">95</tspan>
+          <tspan x="100" y="28" fill="#94a3b8">87</tspan>
+          <tspan x="100" y="58" fill="#166534">92</tspan>
+          <tspan x="100" y="88" fill="#166534">78</tspan>
+          <tspan x="100" y="118" fill="#166534">85</tspan>
+        </text>
+      </g>
+      
+      <!-- OFFSET indicator -->
+      <g transform="translate(-185, 0)">
+        <!-- Skip arrow -->
+        <path d="M 0,20 C 20,0 30,-40 40,-30 L 45,-35 L 40,-20 L 25,-25 L 30,-30 C 25,-35 15,0 0,20 Z" fill="#22c55e" />
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#166534" transform="rotate(-40, 25, -15)">
+          <tspan x="25" y="-15">OFFSET 2</tspan>
+        </text>
+      </g>
+      
+      <!-- LIMIT indicator with OFFSET -->
+      <g transform="translate(185, 80)">
+        <!-- Take arrow -->
+        <path d="M 0,-50 L 0,50 L -5,40 L 0,50 L 5,40 Z" fill="#22c55e" />
+        <rect x="-35" y="0" width="80" height="30" rx="9" ry="5" fill="#22c55e" />
+        <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+          <tspan x="0" y="20">LIMIT 3</tspan>
+        </text>
+      </g>
+    </g>
+    
+    <!-- SQL code -->
+    <rect x="-160" y="208" width="320" height="30" rx="5" ry="5" fill="#1e293b" />
+    <text font-family="Consolas, monospace" font-size="14" text-anchor="middle" fill="#e2e8f0">
+      <tspan x="0" y="228">SELECT * FROM students LIMIT 3 OFFSET 2;</tspan>
+    </text>
+  </g>
+  
+  <!-- Enhanced OFFSET and LIMIT Notes -->
+  <g transform="translate(450, 580)">
+    <rect x="-180" y="-25" width="360" height="40" rx="20" ry="20" fill="url(#noteGradient)" stroke="#334155" stroke-width="2" filter="url(#dropShadow)" />
+    <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      <tspan x="0" y="5">OFFSET n = Skip first n rows</tspan>
+    </text>
+  </g>
+  <g transform="translate(450, 620)">
+    <rect x="-180" y="-25" width="360" height="40" rx="20" ry="20" fill="url(#noteGradient)" stroke="#334155" stroke-width="2" filter="url(#dropShadow)" />
+    <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      <tspan x="0" y="5">LIMIT n = Return only n rows</tspan>
+    </text>
+  </g>
+  
+  <!-- Section 3: Importance of ORDER BY - Bottom Left -->
+  <g transform="translate(225, 690)">
+    <!-- Panel background -->
+    <rect x="-180" y="-40" width="360" height="260" rx="10" ry="10" fill="white" stroke="#cbd5e1" stroke-width="2" filter="url(#dropShadow)" />
+    
+    <!-- Section header -->
+    <rect x="-180" y="-40" width="360" height="50" rx="10" ry="10" fill="url(#orderByGradient)" />
+    <text font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="white">
+      <tspan x="0" y="-10">Importance of ORDER BY</tspan>
+    </text>
+    
+    <!-- Side-by-side comparison -->
+    <g transform="translate(-90, 80)">
+      <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#9a3412">
+        <tspan x="0" y="-55">Without ORDER BY</tspan>
+      </text>
+      
+      <!-- Unordered data -->
+      <rect x="-65" y="-45" width="130" height="150" rx="5" ry="5" fill="#fff7ed" stroke="#fdba74" stroke-width="1" />
+      
+      <!-- Shuffled records -->
+      <g>
+        <text font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#9a3412">
+          <tspan x="-55" y="-25">5. Emma (85)</tspan>
+          <tspan x="-55" y="-5">2. Bob (87)</tspan>
+          <tspan x="-55" y="15">4. David (78)</tspan>
+          <tspan x="-55" y="35">1. Alice (95)</tspan>
+          <tspan x="-55" y="55">3. Charlie (92)</tspan>
+        </text>
+      </g>
+      
+      <!-- Question mark icon -->
+      <g transform="translate(80, 20)">
+        <circle cx="0" cy="0" r="20" fill="#fdba74" />
+        <text font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" fill="#9a3412">
+          <tspan x="0" y="9">?</tspan>
+        </text>
+      </g>
+    </g>
+    
+    <g transform="translate(90, 80)">
+      <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#9a3412">
+        <tspan x="0" y="-55">With ORDER BY</tspan>
+      </text>
+      
+      <!-- Ordered data -->
+      <rect x="-65" y="-45" width="130" height="150" rx="5" ry="5" fill="#fff7ed" stroke="#f97316" stroke-width="2" />
+      
+      <!-- Ordered records -->
+      <g>
+        <text font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#9a3412">
+          <tspan x="-55" y="-25">1. Alice (95)</tspan>
+          <tspan x="-55" y="-5">3. Charlie (92)</tspan>
+          <tspan x="-55" y="15">2. Bob (87)</tspan>
+          <tspan x="-55" y="35">5. Emma (85)</tspan>
+          <tspan x="-55" y="55">4. David (78)</tspan>
+        </text>
+      </g>
+      
+      <!-- Sort icon -->
+      <g transform="translate(80, 20)">
+        <rect x="-15" y="-20" width="30" height="40" rx="5" ry="5" fill="#f97316" />
+        <path d="M -8,-5 L 0,-15 L 8,-5 M 0,-15 L 0,15" stroke="white" stroke-width="3" fill="none" />
+      </g>
+    </g>
+    
+    <!-- Warning text -->
+    <text font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#b91c1c">
+      <tspan x="0" y="170">Without ORDER BY, LIMIT/OFFSET results</tspan>
+      <tspan x="0" y="190">can be unpredictable!</tspan>
+    </text>
+    
+    <!-- SQL code -->
+    <rect x="-160" y="210" width="320" height="30" rx="5" ry="5" fill="#1e293b" />
+    <text font-family="Consolas, monospace" font-size="14" text-anchor="middle" fill="#e2e8f0">
+      <tspan x="0" y="230">SELECT * FROM students ORDER BY score DESC LIMIT 3;</tspan>
+    </text>
+  </g>
+  
+  <!-- Section 4: Performance Warning - Bottom Right -->
+  <g transform="translate(675, 690)">
+    <!-- Panel background -->
+    <rect x="-180" y="-40" width="360" height="260" rx="10" ry="10" fill="white" stroke="#cbd5e1" stroke-width="2" filter="url(#dropShadow)" />
+    
+    <!-- Section header -->
+    <rect x="-180" y="-40" width="360" height="50" rx="10" ry="10" fill="url(#warningGradient)" />
+    <text font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="white">
+      <tspan x="0" y="-10">Performance Warning</tspan>
+    </text>
+    
+    <!-- Performance warning visual -->
+    <g transform="translate(0, 70)">
+      <!-- Database icon -->
+      <g transform="translate(-80, 0)">
+        <rect x="-50" y="-40" width="100" height="80" rx="10" ry="10" fill="#fce7f3" stroke="#db2777" stroke-width="2" />
+        <rect x="-40" y="-30" width="80" height="15" rx="3" ry="3" fill="#f5d0fe" />
+        <rect x="-40" y="-10" width="80" height="15" rx="3" ry="3" fill="#f5d0fe" />
+        <rect x="-40" y="10" width="80" height="15" rx="3" ry="3" fill="#f5d0fe" />
+        <rect x="-40" y="30" width="80" height="15" rx="3" ry="3" fill="#f5d0fe" />
+      </g>
+      
+      <!-- Warning icon -->
+      <g transform="translate(80, -20)">
+        <polygon points="0,-30 30,30 -30,30" fill="#fda4af" stroke="#be185d" stroke-width="2" />
+        <text font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#be185d">
+          <tspan x="0" y="20">!</tspan>
+        </text>
+      </g>
+      
+      <!-- Large offset number -->
+      <g transform="translate(80, 60)">
+        <text font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#be185d">
+          <tspan x="0" y="0">OFFSET 10000</tspan>
+        </text>
+        <path d="M -60,-5 Q -30,10 0,0 Q 30,-10 60,-5" stroke="#db2777" stroke-width="3" stroke-dasharray="5,3" fill="none" />
+      </g>
+      
+      <!-- Processing arrows showing work -->
+      <g transform="translate(-140, 0)">
+        <path d="M 0,-25 L 40,-25 L 30,-30 L 40,-25 L 30,-20 Z" fill="#be185d" />
+        <path d="M 0,0 L 40,0 L 30,-5 L 40,0 L 30,5 Z" fill="#be185d" />
+        <path d="M 0,25 L 40,25 L 30,20 L 40,25 L 30,30 Z" fill="#be185d" />
+      </g>
+    </g>
+    
+    <!-- Warning text -->
+    <text font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#be185d">
+      <tspan x="0" y="170">Large OFFSET values are inefficient —</tspan>
+      <tspan x="0" y="190">all skipped rows must still be processed!</tspan>
+    </text>
+    
+    <!-- SQL code with alternative -->
+    <rect x="-160" y="210" width="320" height="30" rx="5" ry="5" fill="#1e293b" />
+    <text font-family="Consolas, monospace" font-size="12" text-anchor="middle" fill="#e2e8f0">
+      <tspan x="0" y="230">WHERE id > last_seen_id ORDER BY id LIMIT 10;</tspan>
+    </text>
+  </g>
+  
+  <!-- Connecting elements -->
+  <g>
+    <!-- Connection lines between panels -->
+    <path d="M 225,420 Q 450,460 675,420" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="10,5" />
+    <path d="M 225,500 Q 450,460 675,500" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="10,5" />
+  </g>
+  
+  <!-- Footer with attribution -->
+  <g transform="translate(450, 780)">
+    <text font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#64748b">
+        </text>
+  </g>
+</svg>

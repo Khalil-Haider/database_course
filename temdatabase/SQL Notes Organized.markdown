@@ -378,7 +378,7 @@ RENAME TO stu;
 ```sql
 TRUNCATE TABLE student;
 ```
-
+![delete drop truncate ](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/delete_vs_truncate_drop.svg)
 ## Cascading for Foreign Keys
 
 - **ON DELETE CASCADE**: Deletes child table rows when the parent table row is deleted.
