@@ -248,10 +248,32 @@ SELECT rollno, name FROM student;
 # Clause 
 
 <p align="center">
-  <img src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/clause_.svg" alt="Clause" width="600px">
+  <img src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/clause_.svg" alt="Clause" width="800px">
 </p>
 
+
+# What is Clause?
+
+A clause in SQL is a part of a query that performs a specific task like selecting, filtering, grouping, sorting, or limiting data.
+
+| Clause Name | Description | Example Query |
+|:-----------|:-------------|:--------------|
+| **SELECT / DISTINCT** | Retrieves one or more columns. `DISTINCT` removes duplicate values. | `SELECT DISTINCT col_name FROM table_name;` |
+| **FROM** | Specifies the table to get data from. | `SELECT col_name FROM table_name;` |
+| **WHERE** | Filters rows based on a condition. | `SELECT col_name FROM table_name WHERE col_name > 100;` |
+| **GROUP BY** | Groups rows with the same values in a column. | `SELECT col_name FROM table_name GROUP BY col_name;` |
+| **HAVING** | Filters groups after grouping data. | `SELECT col_name FROM table_name GROUP BY col_name HAVING col_name > 100;` |
+| **ORDER BY** | Sorts the rows based on one or more columns. | `SELECT col_name FROM table_name ORDER BY col_name ASC;` |
+| **LIMIT / OFFSET** | Limits the number of rows and skips rows. | `SELECT col_name FROM table_name LIMIT 10 OFFSET 5;` |
+
+
+
 ### WHERE Clause
+
+<p align="center">
+  <img src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/where_clause.svg" alt="where clause" width="800px">
+</p>
+
 ```sql
 SELECT * FROM student WHERE marks > 80;
 SELECT * FROM student WHERE city = 'Mumbai';
@@ -376,6 +398,11 @@ CREATE TABLE student (
 ## Joins
 
 Joins combine rows from multiple tables based on a related column.
+
+<p align="center">
+  <img src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/sql%20join.gif" alt="joins" width="800px">
+</p>
+
 
 ### Types of Joins
 - **Inner Join**: Returns matching records from both tables.
