@@ -539,6 +539,7 @@ SELECT column(s) FROM tableB;
 
 A **subquery** is a query nested within another SQL query.
 
+![subquery](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/subquery.jpg)
 **Examples**:
 
 ### Students with Marks Above Class Average

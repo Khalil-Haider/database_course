@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+  <!-- Background -->
+  <rect width="1000" height="600" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- Main Title -->
+  <g transform="translate(500, 60)">
+    <text font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#333">
+      DROP vs TRUNCATE vs DELETE in SQL
+    </text>
+    <line x1="-300" y1="20" x2="300" y2="20" stroke="#4a90e2" stroke-width="3" />
+  </g>
+  
+  <!-- DELETE Section -->
+  <g transform="translate(165, 130)">
+    <!-- Section Title -->
+    <rect x="-120" y="-10" width="240" height="50" rx="8" ry="8" fill="#4a90e2" />
+    <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
+      <tspan x="0" y="25">DELETE</tspan>
+    </text>
+    
+    <!-- Table Illustration -->
+    <g transform="translate(0, 70)">
+      <!-- Table shadow -->
+      <rect x="-110" y="5" width="220" height="200" rx="5" ry="5" fill="#ddd" />
+      
+      <!-- Table -->
+      <rect x="-105" y="0" width="210" height="195" rx="5" ry="5" fill="white" stroke="#aaa" />
+      
+      <!-- Column Headers -->
+      <rect x="-105" y="0" width="210" height="35" rx="5" ry="5" fill="#e6f0ff" stroke="#aaa" />
+      <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">
+        <tspan x="-85" y="22">Name</tspan>
+        <tspan x="-15" y="22">Class</tspan>
+        <tspan x="65" y="22">ID</tspan>
+      </text>
+      <line x1="-45" y1="0" x2="-45" y2="195" stroke="#aaa" />
+      <line x1="35" y1="0" x2="35" y2="195" stroke="#aaa" />
+      
+      <!-- Rows -->
+      <line x1="-105" y1="35" x2="105" y2="35" stroke="#aaa" />
+      <line x1="-105" y1="70" x2="105" y2="70" stroke="#aaa" />
+      <line x1="-105" y1="105" x2="105" y2="105" stroke="#aaa" />
+      <line x1="-105" y1="140" x2="105" y2="140" stroke="#aaa" />
+      <line x1="-105" y1="175" x2="105" y2="175" stroke="#aaa" />
+      
+      <!-- Row Data -->
+      <text font-family="Arial, sans-serif" font-size="12" fill="#333">
+        <tspan x="-85" y="55">Alice</tspan>
+        <tspan x="-20" y="55">A</tspan>
+        <tspan x="65" y="55">101</tspan>
+      </text>
+      
+      <!-- Deleted Row -->
+      <rect x="-104" y="71" width="208" height="34" fill="#ffcccc" fill-opacity="0.5" />
+      <text font-family="Arial, sans-serif" font-size="12" fill="#aa5555" text-decoration="line-through">
+        <tspan x="-85" y="90">Bob</tspan>
+        <tspan x="-20" y="90">B</tspan>
+        <tspan x="65" y="90">102</tspan>
+      </text>
+      
+      <text font-family="Arial, sans-serif" font-size="12" fill="#333">
+        <tspan x="-85" y="125">Charlie</tspan>
+        <tspan x="-20" y="125">A</tspan>
+        <tspan x="65" y="125">103</tspan>
+      </text>
+      
+      <!-- Deleted Row -->
+      <rect x="-104" y="141" width="208" height="34" fill="#ffcccc" fill-opacity="0.5" />
+      <text font-family="Arial, sans-serif" font-size="12" fill="#aa5555" text-decoration="line-through">
+        <tspan x="-85" y="160">David</tspan>
+        <tspan x="-20" y="160">B</tspan>
+        <tspan x="65" y="160">104</tspan>
+      </text>
+    </g>
+    
+    <!-- Where Condition Icon -->
+    <g transform="translate(130, 140)">
+      <circle cx="0" cy="0" r="30" fill="#ffdddd" stroke="#e74c3c" stroke-width="2" />
+      <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#e74c3c">
+        <tspan x="0" y="5">WHERE</tspan>
+      </text>
+      <text font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#e74c3c">
+        <tspan x="0" y="20">Class='B'</tspan>
+      </text>
+    </g>
+    
+    <!-- Info Text -->
+    <g transform="translate(0, 300)">
+      <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">
+        <tspan x="0" y="0">Row-level operation</tspan>
+        <tspan x="0" y="25">Preserves table structure</tspan>
+        <tspan x="0" y="50">Slower (writes to log)</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- TRUNCATE Section -->
+  <g transform="translate(500, 130)">
+    <!-- Section Title -->
+    <rect x="-120" y="-10" width="240" height="50" rx="8" ry="8" fill="#f39c12" />
+    <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
+      <tspan x="0" y="25">TRUNCATE</tspan>
+    </text>
+    
+    <!-- Table Illustration -->
+    <g transform="translate(0, 70)">
+      <!-- Table shadow -->
+      <rect x="-110" y="5" width="220" height="200" rx="5" ry="5" fill="#ddd" />
+      
+      <!-- Table -->
+      <rect x="-105" y="0" width="210" height="195" rx="5" ry="5" fill="white" stroke="#aaa" />
+      
+      <!-- Column Headers -->
+      <rect x="-105" y="0" width="210" height="35" rx="5" ry="5" fill="#fff5e6" stroke="#aaa" />
+      <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">
+        <tspan x="-85" y="22">Name</tspan>
+        <tspan x="-15" y="22">Class</tspan>
+        <tspan x="65" y="22">ID</tspan>
+      </text>
+      <line x1="-45" y1="0" x2="-45" y2="195" stroke="#aaa" />
+      <line x1="35" y1="0" x2="35" y2="195" stroke="#aaa" />
+      
+      <!-- Empty Rows (just dividers) -->
+      <line x1="-105" y1="35" x2="105" y2="35" stroke="#aaa" />
+      <line x1="-105" y1="70" x2="105" y2="70" stroke="#aaa" />
+      <line x1="-105" y1="105" x2="105" y2="105" stroke="#aaa" />
+      <line x1="-105" y1="140" x2="105" y2="140" stroke="#aaa" />
+      <line x1="-105" y1="175" x2="105" y2="175" stroke="#aaa" />
+      
+      <!-- Empty Data Indicators -->
+      <rect x="-104" y="36" width="208" height="139" fill="#fff9e6" fill-opacity="0.5" />
+      <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#f39c12" opacity="0.3">
+        <tspan x="0" y="120">EMPTY</tspan>
+      </text>
+    </g>
+    
+    <!-- Lightning Icon for Speed -->
+    <g transform="translate(130, 140)">
+      <circle cx="0" cy="0" r="30" fill="#fff5e6" stroke="#f39c12" stroke-width="2" />
+      <path d="M0,-15 L-12,0 L-5,0 L-10,15 L12,0 L5,0 Z" fill="#f39c12" />
+    </g>
+    
+    <!-- Info Text -->
+    <g transform="translate(0, 300)">
+      <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">
+        <tspan x="0" y="0">Deletes all rows (no WHERE clause)</tspan>
+        <tspan x="0" y="22">Preserves table structure</tspan>
+        <tspan x="0" y="44">Fast operation (minimal logging)</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- DROP Section -->
+  <g transform="translate(835, 130)">
+    <!-- Section Title -->
+    <rect x="-120" y="-10" width="240" height="50" rx="8" ry="8" fill="#e74c3c" />
+    <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
+      <tspan x="0" y="25">DROP</tspan>
+    </text>
+    
+    <!-- Table Illustration (Shattered/Disappearing) -->
+    <g transform="translate(0, 70)" opacity="0.7">
+      <!-- Table shadow pieces -->
+      <g opacity="0.5">
+        <polygon points="-110,5 -50,25 -70,80 -130,60" fill="#ddd" />
+        <polygon points="-50,25 30,15 10,70 -70,80" fill="#ddd" />
+        <polygon points="30,15 110,5 50,60 10,70" fill="#ddd" />
+        <polygon points="-130,60 -70,80 -90,150 -150,130" fill="#ddd" />
+        <polygon points="-70,80 10,70 -10,140 -90,150" fill="#ddd" />
+        <polygon points="10,70 50,60 30,130 -10,140" fill="#ddd" />
+        <polygon points="50,60 110,50 90,130 30,130" fill="#ddd" />
+      </g>
+      
+      <!-- Broken Table Pieces -->
+      <g>
+        <polygon points="-105,0 -45,20 -65,75 -125,55" fill="white" stroke="#aaa" />
+        <polygon points="-45,20 35,10 15,65 -65,75" fill="white" stroke="#aaa" />
+        <polygon points="35,10 105,0 45,55 15,65" fill="white" stroke="#aaa" />
+        <polygon points="-125,55 -65,75 -85,145 -145,125" fill="white" stroke="#aaa" />
+        <polygon points="-65,75 15,65 -5,135 -85,145" fill="white" stroke="#aaa" />
+        <polygon points="15,65 45,55 25,125 -5,135" fill="white" stroke="#aaa" />
+        <polygon points="45,55 105,45 85,125 25,125" fill="white" stroke="#aaa" />
+      </g>
+    </g>
+    
+    <!-- Trash Icon -->
+    <g transform="translate(130, 140)">
+      <circle cx="0" cy="0" r="30" fill="#ffeeee" stroke="#e74c3c" stroke-width="2" />
+      <!-- Trash can icon -->
+      <rect x="-10" y="-15" width="20" height="5" fill="#e74c3c" />
+      <rect x="-15" y="-10" width="30" height="25" rx="2" ry="2" fill="none" stroke="#e74c3c" stroke-width="2" />
+      <line x1="-8" y1="-5" x2="-8" y2="10" stroke="#e74c3c" stroke-width="2" />
+      <line x1="0" y1="-5" x2="0" y2="10" stroke="#e74c3c" stroke-width="2" />
+      <line x1="8" y1="-5" x2="8" y2="10" stroke="#e74c3c" stroke-width="2" />
+    </g>
+    
+    <!-- Info Text -->
+    <g transform="translate(0, 300)">
+      <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">
+        <tspan x="0" y="0">Deletes entire table or column</tspan>
+        <tspan x="0" y="25">Removes structure and data</tspan>
+        <tspan x="15" y="50">Irreversible without backup</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Comparison Arrows -->
+  <g transform="translate(500, 450)">
+    <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">
+      <tspan x="0" y="130">Performance &amp; Impact</tspan>
+    </text>
+    <line x1="-250" y1="60" x2="250" y2="60" stroke="#333" stroke-width="2" />
+    <polygon points="250,30 240,25 240,35" fill="#333" />
+    <polygon points="-250,30 -240,25 -240,35" fill="#333" />
+    
+    <text font-family="Arial, sans-serif" font-size="14" text-anchor="start" fill="#333">
+      <tspan x="-240" y="79">• Slower</tspan>
+      <tspan x="-240" y="100">• More Control</tspan>
+      <tspan x="-240" y="125">• Less Impact</tspan>
+    </text>
+    
+    <text font-family="Arial, sans-serif" font-size="14" text-anchor="end" fill="#333">
+      <tspan x="240" y="79">• Faster</tspan>
+      <tspan x="240" y="100">• Less Control</tspan>
+      <tspan x="240" y="125">• More Impact</tspan>
+    </text>
+    
+    <g transform="translate(-200, 20)">
+      <circle cx="0" cy="24" r="15" fill="#4a90e2" />
+      <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
+        <tspan x="0" y="29">DEL</tspan>
+      </text>
+    </g>
+    
+    <g transform="translate(0, 20)">
+      <circle cx="0" cy="24" r="15" fill="#f39c12" />
+      <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
+        <tspan x="0" y="29">TRU</tspan>
+      </text>
+    </g>
+    
+    <g transform="translate(200, 20)">
+      <circle cx="0" cy="24" r="15" fill="#e74c3c" />
+      <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
+        <tspan x="0" y="29">DRP</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <!-- <g transform="translate(500, 570)">
+    <text font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      <tspan x="0" y="10">SQL Commands Comparison: Understanding Data Manipulation Operations</tspan>
+    </text>
+  </g> -->
+
+</svg>
