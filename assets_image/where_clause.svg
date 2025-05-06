@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- Main Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold" fill="#333">SQL WHERE Clause Operators</text>
+  
+  <!-- Main Box -->
+  <rect x="20" y="70" width="770" height="480" fill="#e9ecef" stroke="#495057" stroke-width="2" rx="8" ry="8" />
+  
+  <!-- WHERE Box -->
+  <rect x="200" y="90" width="400" height="60" fill="#4285f4" stroke="#2c6bed" stroke-width="2" rx="8" ry="8" />
+  <text x="400" y="130" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold" fill="white">WHERE Clause</text>
+  
+  <!-- Connection Lines -->
+  <line x1="400" y1="150" x2="400" y2="180" stroke="#495057" stroke-width="3" />
+  <line x1="400" y1="180" x2="200" y2="180" stroke="#495057" stroke-width="3" />
+  <line x1="400" y1="180" x2="600" y2="180" stroke="#495057" stroke-width="3" />
+  <line x1="200" y1="180" x2="200" y2="200" stroke="#495057" stroke-width="3" />
+  <line x1="400" y1="180" x2="400" y2="200" stroke="#495057" stroke-width="3" />
+  <line x1="600" y1="180" x2="600" y2="200" stroke="#495057" stroke-width="3" />
+  
+  <!-- Category Boxes -->
+  <rect x="100" y="200" width="200" height="50" fill="#34a853" stroke="#2d8047" stroke-width="2" rx="8" ry="8" />
+  <text x="200" y="232" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold" fill="white">Comparison Operators</text>
+  
+  <rect x="300" y="200" width="200" height="50" fill="#fbbc05" stroke="#e0a800" stroke-width="2" rx="8" ry="8" />
+  <text x="400" y="232" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold" fill="white">Logical Operators</text>
+  
+  <rect x="500" y="200" width="200" height="50" fill="#ea4335" stroke="#d33426" stroke-width="2" rx="8" ry="8" />
+  <text x="600" y="232" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold" fill="white">Other Operators</text>
+  
+  <!-- Category Connection Lines -->
+  <line x1="200" y1="250" x2="200" y2="270" stroke="#2d8047" stroke-width="2" />
+  <line x1="400" y1="250" x2="400" y2="270" stroke="#e0a800" stroke-width="2" />
+  <line x1="600" y1="250" x2="600" y2="270" stroke="#d33426" stroke-width="2" />
+  
+  <!-- Comparison Operators Box -->
+  <rect x="40" y="270" width="220" height="250" fill="white" stroke="#2d8047" stroke-width="2" rx="8" ry="8" />
+  <text x="150" y="300" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#2d8047">Comparison Operators</text>
+  
+  <text x="60" y="330" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">=</text>
+  <text x="100" y="330" font-family="Arial, sans-serif" font-size="14" fill="#333">Equal to</text>
+  
+  <text x="60" y="360" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">&lt;</text>
+  <text x="100" y="360" font-family="Arial, sans-serif" font-size="14" fill="#333">Less than</text>
+  
+  <text x="60" y="390" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">&gt;</text>
+  <text x="100" y="390" font-family="Arial, sans-serif" font-size="14" fill="#333">Greater than</text>
+  
+  <text x="60" y="420" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">&lt;=</text>
+  <text x="100" y="420" font-family="Arial, sans-serif" font-size="14" fill="#333">Less than or equal to</text>
+  
+  <text x="60" y="450" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">&gt;=</text>
+  <text x="100" y="450" font-family="Arial, sans-serif" font-size="14" fill="#333">Greater than or equal to</text>
+  
+  <text x="60" y="480" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">&lt;&gt; or !=</text>
+  <text x="120" y="480" font-family="Arial, sans-serif" font-size="14" fill="#333">Not equal to</text>
+  
+  <!-- Logical Operators Box -->
+  <rect x="270" y="270" width="191" height="250" fill="white" stroke="#e0a800" stroke-width="2" rx="8" ry="8" />
+  <text x="380" y="300" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#e0a800">Logical Operators</text>
+  
+  <text x="300" y="350" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">AND</text>
+  <text x="350" y="350" font-family="Arial, sans-serif" font-size="14" fill="#333">Logical AND</text>
+  
+  <text x="300" y="400" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">OR</text>
+  <text x="350" y="400" font-family="Arial, sans-serif" font-size="14" fill="#333">Logical OR</text>
+  
+  <text x="300" y="450" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">NOT</text>
+  <text x="350" y="450" font-family="Arial, sans-serif" font-size="14" fill="#333">Negative result</text>
+  
+  <!-- Other Operators Box -->
+  <rect x="470" y="270" width="310" height="250" fill="white" stroke="#d33426" stroke-width="2" rx="8" ry="8" />
+  <text x="600" y="300" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#d33426">Other Operators</text>
+  
+  <text x="480" y="330" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">LIKE</text>
+  <text x="550" y="330" font-family="Arial, sans-serif" font-size="14" fill="#333">Pattern matching (case sensitive)</text>
+  
+  <text x="480" y="360" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">ILIKE</text>
+  <text x="550" y="360" font-family="Arial, sans-serif" font-size="14" fill="#333">Pattern matching (case insensitive)</text>
+  
+  <text x="480" y="390" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">IN</text>
+  <text x="570" y="390" font-family="Arial, sans-serif" font-size="14" fill="#333">Value within a set</text>
+  
+  <text x="480" y="420" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">BETWEEN</text>
+  <text x="570" y="420" font-family="Arial, sans-serif" font-size="14" fill="#333">Value within a range</text>
+  
+  <text x="480" y="450" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">IS NULL</text>
+  <text x="570" y="450" font-family="Arial, sans-serif" font-size="14" fill="#333">Value is NULL</text>
+  
+  <!-- Footer -->
+  <text x="400" y="570" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#495057">SQL WHERE Clause Operators Hierarchy</text>
+</svg>

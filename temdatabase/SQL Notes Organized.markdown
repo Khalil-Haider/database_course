@@ -145,7 +145,10 @@ VALUES
 
 ## Keys
 
-![Types of keys](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/Types-of-Keys-in-Database.PNG)
+<p align="center">
+  <img src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/Types-of-Keys-in-Database.PNG" alt="Types of keys" width="800px">
+</p>
+
 
 - **Primary Key (PK)**: Uniquely identifies each row, only one per table, cannot be NULL.
 - **Foreign Key (FK)**: Refers to the primary key in another table, can have duplicates and NULL values.
@@ -191,7 +194,10 @@ CREATE TABLE student (
 | 3   | Delhi     |
 
 ## Constraints
-![Constrainsts](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/constraints.svg)                             |
+<p align="center">
+  <img src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/constraints.svg" alt="Clause" width="800px">
+</p>
+                          |
 
 **Examples**:
 ```sql
@@ -240,6 +246,10 @@ VALUES
 SELECT rollno, name FROM student;
 ```
 # Clause 
+
+<p align="center">
+  <img src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/clause_.svg" alt="Clause" width="600px">
+</p>
 
 ### WHERE Clause
 ```sql
