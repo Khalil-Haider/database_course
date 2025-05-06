@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+    </pattern>
+    <!-- SELECT/DISTINCT Icon -->
+    <symbol id="select-icon" viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="20" fill="white" stroke="#4299e1" stroke-width="3"/>
+      <circle cx="30" cy="30" r="12" fill="none" stroke="#4299e1" stroke-width="3"/>
+      <line x1="42" y1="42" x2="50" y2="50" stroke="#4299e1" stroke-width="5" stroke-linecap="round"/>
+    </symbol>
+    <!-- FROM Icon -->
+    <symbol id="from-icon" viewBox="0 0 60 60">
+      <ellipse cx="30" cy="20" rx="20" ry="8" fill="white" stroke="#4299e1" stroke-width="3"/>
+      <ellipse cx="30" cy="30" rx="20" ry="8" fill="white" stroke="#4299e1" stroke-width="3"/>
+      <ellipse cx="30" cy="40" rx="20" ry="8" fill="white" stroke="#4299e1" stroke-width="3"/>
+      <line x1="10" y1="20" x2="10" y2="40" stroke="#4299e1" stroke-width="3"/>
+      <line x1="50" y1="20" x2="50" y2="40" stroke="#4299e1" stroke-width="3"/>
+    </symbol>
+    <!-- WHERE Icon -->
+    <symbol id="where-icon" viewBox="0 0 60 60">
+      <path d="M20,20 L40,20 L34,35 L34,45 L26,45 L26,35 Z" fill="white" stroke="#ed8936" stroke-width="3" stroke-linejoin="round"/>
+    </symbol>
+    <!-- GROUP BY Icon -->
+    <symbol id="group-by-icon" viewBox="0 0 60 60">
+      <circle cx="25" cy="25" r="10" fill="white" stroke="#805ad5" stroke-width="3"/>
+      <circle cx="25" cy="45" r="10" fill="white" stroke="#805ad5" stroke-width="3"/>
+      <circle cx="45" cy="25" r="10" fill="white" stroke="#805ad5" stroke-width="3"/>
+      <circle cx="45" cy="45" r="10" fill="white" stroke="#805ad5" stroke-width="3"/>
+      <line x1="25" y1="35" x2="25" y2="35" stroke="#805ad5" stroke-width="3"/>
+      <line x1="45" y1="35" x2="45" y2="35" stroke="#805ad5" stroke-width="3"/>
+    </symbol>
+    <!-- HAVING Icon -->
+    <symbol id="having-icon" viewBox="0 0 60 60">
+      <path d="M20,35 L30,45 L45,25" fill="none" stroke="#4299e1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- ORDER BY Icon -->
+    <symbol id="order-by-icon" viewBox="0 0 60 60">
+      <line x1="20" y1="20" x2="40" y2="20" stroke="#805ad5" stroke-width="5" stroke-linecap="round"/>
+      <line x1="20" y1="30" x2="35" y2="30" stroke="#805ad5" stroke-width="5" stroke-linecap="round"/>
+      <line x1="20" y1="40" x2="30" y2="40" stroke="#805ad5" stroke-width="5" stroke-linecap="round"/>
+      <path d="M45,15 L55,30 L35,30 Z" fill="#805ad5"/>
+    </symbol>
+    <!-- LIMIT/OFFSET Icon -->
+    <symbol id="limit-offset-icon" viewBox="0 0 60 60">
+      <rect x="15" y="20" width="30" height="10" rx="3" fill="#4fd1c5"/>
+      <rect x="15" y="35" width="20" height="10" rx="3" fill="#4fd1c5"/>
+      <rect x="15" y="50" width="25" height="10" rx="3" fill="#4fd1c5"/>
+      <circle cx="50" cy="45" r="8" fill="white" stroke="#4299e1" stroke-width="2"/>
+      <text x="50" y="48" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#4299e1">1</text>
+    </symbol>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="700" fill="#f5f7fa"/>
+  <rect width="800" height="700" fill="url(#grid)"/>
+  
+  <!-- Title -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#2c5282">PostgreSQL Clauses with Functional Icons</text>
+  
+  <!-- Row 1 -->
+  <!-- SELECT/DISTINCT Card -->
+  <g transform="translate(100, 100)">
+    <rect width="180" height="180" rx="15" fill="#e6fffa" stroke="#4fd1c5" stroke-width="3" filter="url(#shadow)"/>
+    <text x="90" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c7a7b">SELECT</text>
+    <text x="90" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c7a7b">DISTINCT</text>
+    <use href="#select-icon" x="60" y="95" width="60" height="60"/>
+  </g>
+  
+  <!-- FROM Card -->
+  <g transform="translate(310, 100)">
+    <rect width="180" height="180" rx="15" fill="#ebf8ff" stroke="#63b3ed" stroke-width="3" filter="url(#shadow)"/>
+    <text x="90" y="65" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2b6cb0">FROM</text>
+    <use href="#from-icon" x="60" y="95" width="60" height="60"/>
+  </g>
+  
+  <!-- WHERE Card -->
+  <g transform="translate(520, 100)">
+    <rect width="180" height="180" rx="15" fill="#fff5f5" stroke="#feb2b2" stroke-width="3" filter="url(#shadow)"/>
+    <text x="90" y="65" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#c53030">WHERE</text>
+    <use href="#where-icon" x="60" y="95" width="60" height="60"/>
+  </g>
+  
+  <!-- Row 2 -->
+  <!-- GROUP BY Card -->
+  <g transform="translate(100, 310)">
+    <rect width="180" height="180" rx="15" fill="#feebc8" stroke="#f6ad55" stroke-width="3" filter="url(#shadow)"/>
+    <text x="90" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#7b341e">GROUP</text>
+    <text x="90" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#7b341e">BY</text>
+    <use href="#group-by-icon" x="60" y="95" width="60" height="60"/>
+  </g>
+  
+  <!-- HAVING Card -->
+  <g transform="translate(310, 310)">
+    <rect width="180" height="180" rx="15" fill="#e6fffa" stroke="#4fd1c5" stroke-width="3" filter="url(#shadow)"/>
+    <text x="90" y="65" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#285e61">HAVING</text>
+    <use href="#having-icon" x="60" y="95" width="60" height="60"/>
+  </g>
+  
+  <!-- ORDER BY Card -->
+  <g transform="translate(520, 310)">
+    <rect width="180" height="180" rx="15" fill="#e9d8fd" stroke="#b794f4" stroke-width="3" filter="url(#shadow)"/>
+    <text x="90" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#553c9a">ORDER</text>
+    <text x="90" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#553c9a">BY</text>
+    <use href="#order-by-icon" x="60" y="95" width="60" height="60"/>
+  </g>
+  
+  <!-- Row 3 - Centered LIMIT/OFFSET Card -->
+  <g transform="translate(310, 520)">
+    <rect width="180" height="180" rx="15" fill="#fed7e2" stroke="#f687b3" stroke-width="3" filter="url(#shadow)"/>
+    <text x="90" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#97266d">LIMIT</text>
+    <text x="90" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#97266d">OFFSET</text>
+    <use href="#limit-offset-icon" x="60" y="95" width="60" height="60"/>
+  </g>
+</svg>
