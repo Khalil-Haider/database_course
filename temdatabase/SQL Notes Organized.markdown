@@ -297,6 +297,10 @@ SELECT * FROM student WHERE city IN ('Delhi', 'Mumbai');
 ```sql
 SELECT * FROM student LIMIT 3;
 ```
+<p align="center">
+  <img src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/limit_offset.svg" alt="limit offset" width="700px">
+</p>
+
 
 ### ORDER BY Clause
 ```sql
