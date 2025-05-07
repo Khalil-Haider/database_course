@@ -685,6 +685,7 @@ $$;
 
 ```
 
+![Store procedure](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/store_procedure_define_1.jpg)
 
 
 # 📚 Query vs Stored Procedure
@@ -708,7 +709,7 @@ $$;
   - Stored, precompiled, and optimized by the database.
 
 
-
+![query vs Store procedure](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/Stored_Procedures_Vs_Simple%20Query.PNG)
 
 # 🚀 Stored Procedure vs Python Code
 
@@ -737,4 +738,10 @@ $$;
 
 ---
 
+![Store Procedure vs python code ](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/Stored_Procedures_Vs_python_code.PNG)
 
+# Window Functions
+```
+Window Functions work like GROUP BY but keep all rows visible
+using a window function prevents rows from being aggregated into a single output row
+```
