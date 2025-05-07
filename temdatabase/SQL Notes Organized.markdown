@@ -579,3 +579,6 @@ SELECT * FROM view1;
 ```
 
 **Note**: Views are updated automatically when the underlying table data changes.
+
+![view](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/view.png)
+
