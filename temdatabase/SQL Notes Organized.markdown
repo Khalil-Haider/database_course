@@ -306,6 +306,20 @@ SELECT * FROM student LIMIT 3;
 ```sql
 SELECT * FROM student ORDER BY city ASC;
 ```
+# Other Operator
+
+<p align="center">
+  <img src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/pattern_match_like_ilike.svg" alt="Like vs Ilike" width="700px">
+</p>
+
+# Pattern Rules 
+
+<p align="center">
+  <img src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/pattern_matching_like.PNG" alt="attern rules" width="700px">
+</p>
+
+# String Function 
+
 
 ### Aggregate Functions
 - `COUNT()`: Counts rows.

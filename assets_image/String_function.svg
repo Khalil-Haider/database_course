@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="900" viewBox="0 0 1800 900">
+  <!-- Background -->
+  <rect width="1800" height="900" fill="#f8f9fa" rx="15" ry="15"/>
+  
+  <!-- Title -->
+  <g transform="translate(900, 60)">
+    <text font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#336791" text-anchor="middle">Top 10 PostgreSQL String Functions</text>
+  </g>
+  
+  <!-- PostgreSQL Elephant Icon -->
+  <g transform="translate(65, 45)">
+    <path d="M30,10 C13.4,10 0,20.6 0,33.7c0,8.9 6.1,16.8 15.5,21.5c3.8,1.9 8.1,3.1 12.6,3.5c0.4,0.1 0.7,0.1 1.1,0.1c1.2,0 2.3-0.2 3.1-0.8c0.5-0.3 0.9-0.8 1.2-1.5c0.3-0.6 0.3-1.9 0.3-2.7l-0.1-2.2c-8.6,1.8-10.2-1.1-10.9-1.9c-0.8-1.5-1.9-1.9-1.9-1.9c-1.5-1 0.1-1 0.1-1c1.7,0.1 2.6,1.7 2.6,1.7c1.5,2.6 4,1.8 5,1.4c0.3-1.1 0.6-1.8 1.1-2.3c-7.4-0.8-15.3-3.7-15.3-16.5c0-3.6 1.3-6.6 3.4-8.9c-0.3-0.8-1.5-4.2 0.3-8.7c0,0 2.8-0.9 9.1,3.4c2.6-0.7 5.5-1.1 8.3-1.1c2.8,0 5.7,0.4 8.3,1.1c6.3-4.3 9.1-3.4 9.1-3.4c1.8,4.5 0.7,7.9 0.3,8.7c2.1,2.3 3.4,5.3 3.4,8.9c0,12.8-7.8,15.7-15.3,16.5c0.6,0.5 1.2,1.5 1.2,3.1c0,2.2 0,4 0,4.6c0,0.8 0.2,1.7 0.7,2.3c0.5,0.5 1.3,0.8 2.3,0.8c0.8,0 1.6-0.1 2.4-0.3c10.8-3.6 18.6-13.9 18.6-25.9C60,20.6 46.6,10 30,10z" fill="#336791"/>
+  </g>
+
+  <!-- Left Column: Functions 1-5 -->
+  <!-- 1. LENGTH() -->
+  <g transform="translate(50, 120)">
+    <rect width="800" height="140" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2"/>
+    
+    <!-- Function Name -->
+    <rect width="800" height="40" rx="10" ry="10" fill="#336791"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">1. LENGTH()</text>
+    
+    <!-- Purpose -->
+    <text x="20" y="60" font-family="Arial, sans-serif" font-size="16" fill="#333">
+      <tspan x="20" y="60">• Purpose: Returns the number of characters in a string.</tspan>
+    </text>
+    
+    <!-- Example -->
+    <rect x="20" y="75" width="400" height="40" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+    <text x="30" y="100" font-family="Courier, monospace" font-size="14" fill="#333">
+      <tspan x="30" y="100">SELECT LENGTH('Hello World');</tspan>
+    </text>
+    
+    <!-- Result -->
+    <rect x="440" y="75" width="340" height="40" rx="5" ry="5" fill="#e6f7ff" stroke="#ccd"/>
+    <text x="450" y="100" font-family="Courier, monospace" font-size="14" fill="#0066cc">
+      <tspan x="450" y="100">Returns: 11</tspan>
+    </text>
+  </g>
+  
+  <!-- 2. UPPER() / LOWER() -->
+  <g transform="translate(50, 270)">
+    <rect width="800" height="140" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2"/>
+    
+    <!-- Function Name -->
+    <rect width="800" height="40" rx="10" ry="10" fill="#336791"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">2. UPPER() / LOWER()</text>
+    
+    <!-- Purpose -->
+    <text x="20" y="60" font-family="Arial, sans-serif" font-size="16" fill="#333">
+      <tspan x="20" y="60">• Purpose: Converts a string to uppercase or lowercase.</tspan>
+    </text>
+    
+    <!-- Example -->
+    <rect x="20" y="75" width="400" height="50" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+    <text x="30" y="95" font-family="Courier, monospace" font-size="14" fill="#333">
+      <tspan x="30" y="95">SELECT UPPER('hello');</tspan>
+      <tspan x="30" y="115">SELECT LOWER('HELLO');</tspan>
+    </text>
+    
+    <!-- Result -->
+    <rect x="440" y="75" width="340" height="50" rx="5" ry="5" fill="#e6f7ff" stroke="#ccd"/>
+    <text x="450" y="95" font-family="Courier, monospace" font-size="14" fill="#0066cc">
+      <tspan x="450" y="95">Returns: 'HELLO'</tspan>
+      <tspan x="450" y="115">Returns: 'hello'</tspan>
+    </text>
+  </g>
+  
+  <!-- 3. INITCAP() -->
+  <g transform="translate(50, 420)">
+    <rect width="800" height="140" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2"/>
+    
+    <!-- Function Name -->
+    <rect width="800" height="40" rx="10" ry="10" fill="#336791"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">3. INITCAP()</text>
+    
+    <!-- Purpose -->
+    <text x="20" y="60" font-family="Arial, sans-serif" font-size="16" fill="#333">
+      <tspan x="20" y="60">• Purpose: Converts the first letter of each word to uppercase.</tspan>
+    </text>
+    
+    <!-- Example -->
+    <rect x="20" y="75" width="400" height="40" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+    <text x="30" y="100" font-family="Courier, monospace" font-size="14" fill="#333">
+      <tspan x="30" y="100">SELECT INITCAP('hello world');</tspan>
+    </text>
+    
+    <!-- Result -->
+    <rect x="440" y="75" width="340" height="40" rx="5" ry="5" fill="#e6f7ff" stroke="#ccd"/>
+    <text x="450" y="100" font-family="Courier, monospace" font-size="14" fill="#0066cc">
+      <tspan x="450" y="100">Returns: 'Hello World'</tspan>
+    </text>
+  </g>
+  
+  <!-- 4. CONCAT() and || -->
+  <g transform="translate(50, 570)">
+    <rect width="800" height="140" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2"/>
+    
+    <!-- Function Name -->
+    <rect width="800" height="40" rx="10" ry="10" fill="#336791"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">4. CONCAT() and || (Concatenation Operator)</text>
+    
+    <!-- Purpose -->
+    <text x="20" y="60" font-family="Arial, sans-serif" font-size="16" fill="#333">
+      <tspan x="20" y="60">• Purpose: Concatenates two or more strings.</tspan>
+    </text>
+    
+    <!-- Example -->
+    <rect x="20" y="75" width="400" height="50" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+    <text x="30" y="95" font-family="Courier, monospace" font-size="14" fill="#333">
+      <tspan x="30" y="95">SELECT CONCAT('Hello', ' ', 'World');</tspan>
+      <tspan x="30" y="115">SELECT 'Hello' || ' ' || 'World';</tspan>
+    </text>
+    
+    <!-- Result -->
+    <rect x="440" y="75" width="340" height="50" rx="5" ry="5" fill="#e6f7ff" stroke="#ccd"/>
+    <text x="450" y="95" font-family="Courier, monospace" font-size="14" fill="#0066cc">
+      <tspan x="450" y="95">Returns: 'Hello World'</tspan>
+      <tspan x="450" y="115">Returns: 'Hello World'</tspan>
+    </text>
+  </g>
+  
+  <!-- 5. SUBSTRING() / SUBSTR() -->
+  <g transform="translate(50, 720)">
+    <rect width="800" height="140" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2"/>
+    
+    <!-- Function Name -->
+    <rect width="800" height="40" rx="10" ry="10" fill="#336791"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">5. SUBSTRING() / SUBSTR()</text>
+    
+    <!-- Purpose -->
+    <text x="20" y="60" font-family="Arial, sans-serif" font-size="16" fill="#333">
+      <tspan x="20" y="60">• Purpose: Extracts a substring from a string.</tspan>
+    </text>
+    
+    <!-- Example -->
+    <rect x="20" y="75" width="400" height="50" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+    <text x="30" y="95" font-family="Courier, monospace" font-size="14" fill="#333">
+      <tspan x="30" y="95">SELECT SUBSTRING('Hello World' FROM 7 FOR 5);</tspan>
+      <tspan x="30" y="115">SELECT SUBSTR('Hello World', 7, 5);</tspan>
+    </text>
+    
+    <!-- Result -->
+    <rect x="440" y="75" width="340" height="50" rx="5" ry="5" fill="#e6f7ff" stroke="#ccd"/>
+    <text x="450" y="95" font-family="Courier, monospace" font-size="14" fill="#0066cc">
+      <tspan x="450" y="95">Returns: 'World'</tspan>
+      <tspan x="450" y="115">Returns: 'World'</tspan>
+    </text>
+  </g>
+  
+  <!-- Right Column: Functions 6-10 -->
+  <!-- 6. TRIM(), LTRIM(), RTRIM() -->
+  <g transform="translate(910, 120)">
+    <rect width="800" height="150" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2"/>
+    
+    <!-- Function Name -->
+    <rect width="800" height="40" rx="10" ry="10" fill="#336791"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">6. TRIM(), LTRIM(), RTRIM()</text>
+    
+    <!-- Purpose -->
+    <text x="20" y="60" font-family="Arial, sans-serif" font-size="16" fill="#333">
+      <tspan x="20" y="60">• Purpose: Removes whitespace or specified characters from a string.</tspan>
+    </text>
+    
+    <!-- Example -->
+    <rect x="20" y="75" width="400" height="60" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+    <text x="30" y="95" font-family="Courier, monospace" font-size="14" fill="#333">
+      <tspan x="30" y="95">SELECT TRIM('  Hello  ');</tspan>
+      <tspan x="30" y="115">SELECT LTRIM('  Hello');</tspan>
+      <tspan x="30" y="135">SELECT RTRIM('Hello  ');</tspan>
+    </text>
+    
+    <!-- Result -->
+    <rect x="440" y="75" width="340" height="60" rx="5" ry="5" fill="#e6f7ff" stroke="#ccd"/>
+    <text x="450" y="95" font-family="Courier, monospace" font-size="14" fill="#0066cc">
+      <tspan x="450" y="95">Returns: 'Hello'</tspan>
+      <tspan x="450" y="115">Returns: 'Hello'</tspan>
+      <tspan x="450" y="135">Returns: 'Hello'</tspan>
+    </text>
+  </g>
+  
+  <!-- 7. REPLACE() -->
+  <g transform="translate(910, 280)">
+    <rect width="800" height="140" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2"/>
+    
+    <!-- Function Name -->
+    <rect width="800" height="40" rx="10" ry="10" fill="#336791"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">7. REPLACE()</text>
+    
+    <!-- Purpose -->
+    <text x="20" y="60" font-family="Arial, sans-serif" font-size="16" fill="#333">
+      <tspan x="20" y="60">• Purpose: Replaces all occurrences of a substring with another substring.</tspan>
+    </text>
+    
+    <!-- Example -->
+    <rect x="20" y="75" width="400" height="40" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+    <text x="30" y="100" font-family="Courier, monospace" font-size="14" fill="#333">
+      <tspan x="30" y="100">SELECT REPLACE('Hello World', 'World', 'PostgreSQL');</tspan>
+    </text>
+    
+    <!-- Result -->
+    <rect x="440" y="75" width="340" height="40" rx="5" ry="5" fill="#e6f7ff" stroke="#ccd"/>
+    <text x="450" y="100" font-family="Courier, monospace" font-size="14" fill="#0066cc">
+      <tspan x="450" y="100">Returns: 'Hello PostgreSQL'</tspan>
+    </text>
+  </g>
+  
+  <!-- 8. POSITION() / STRPOS() -->
+  <g transform="translate(910, 430)">
+    <rect width="800" height="140" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2"/>
+    
+    <!-- Function Name -->
+    <rect width="800" height="40" rx="10" ry="10" fill="#336791"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">8. POSITION() / STRPOS()</text>
+    
+    <!-- Purpose -->
+    <text x="20" y="60" font-family="Arial, sans-serif" font-size="16" fill="#333">
+      <tspan x="20" y="60">• Purpose: Finds the position of a substring within a string.</tspan>
+    </text>
+    
+    <!-- Example -->
+    <rect x="20" y="75" width="400" height="50" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+    <text x="30" y="95" font-family="Courier, monospace" font-size="14" fill="#333">
+      <tspan x="30" y="95">SELECT POSITION('World' IN 'Hello World');</tspan>
+      <tspan x="30" y="115">SELECT STRPOS('Hello World', 'World');</tspan>
+    </text>
+    
+    <!-- Result -->
+    <rect x="440" y="75" width="340" height="50" rx="5" ry="5" fill="#e6f7ff" stroke="#ccd"/>
+    <text x="450" y="95" font-family="Courier, monospace" font-size="14" fill="#0066cc">
+      <tspan x="450" y="95">Returns: 7</tspan>
+      <tspan x="450" y="115">Returns: 7</tspan>
+    </text>
+  </g>
+  
+  <!-- 9. LEFT() / RIGHT() -->
+  <g transform="translate(910, 580)">
+    <rect width="800" height="140" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2"/>
+    
+    <!-- Function Name -->
+    <rect width="800" height="40" rx="10" ry="10" fill="#336791"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">9. LEFT() / RIGHT()</text>
+    
+    <!-- Purpose -->
+    <text x="20" y="60" font-family="Arial, sans-serif" font-size="16" fill="#333">
+      <tspan x="20" y="60">• Purpose: Extracts a specified number of characters from the start or end of a string.</tspan>
+    </text>
+    
+    <!-- Example -->
+    <rect x="20" y="75" width="400" height="50" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+    <text x="30" y="95" font-family="Courier, monospace" font-size="14" fill="#333">
+      <tspan x="30" y="95">SELECT LEFT('Hello World', 5);</tspan>
+      <tspan x="30" y="115">SELECT RIGHT('Hello World', 5);</tspan>
+    </text>
+    
+    <!-- Result -->
+    <rect x="440" y="75" width="340" height="50" rx="5" ry="5" fill="#e6f7ff" stroke="#ccd"/>
+    <text x="450" y="95" font-family="Courier, monospace" font-size="14" fill="#0066cc">
+      <tspan x="450" y="95">Returns: 'Hello'</tspan>
+      <tspan x="450" y="115">Returns: 'World'</tspan>
+    </text>
+  </g>
+  
+  <!-- 10. SPLIT_PART() -->
+  <g transform="translate(910, 730)">
+    <rect width="800" height="140" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2"/>
+    
+    <!-- Function Name -->
+    <rect width="800" height="40" rx="10" ry="10" fill="#336791"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">10. SPLIT_PART()</text>
+    
+    <!-- Purpose -->
+    <text x="20" y="60" font-family="Arial, sans-serif" font-size="16" fill="#333">
+      <tspan x="20" y="60">• Purpose: Splits a string on a delimiter and returns the specified part.</tspan>
+    </text>
+    
+    <!-- Example -->
+    <rect x="20" y="75" width="400" height="50" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+    <text x="30" y="95" font-family="Courier, monospace" font-size="14" fill="#333">
+      <tspan x="30" y="95">SELECT SPLIT_PART('user@example.com', '@', 1);</tspan>
+      <tspan x="30" y="115">SELECT SPLIT_PART('user@example.com', '@', 2);</tspan>
+    </text>
+    
+    <!-- Result -->
+    <rect x="440" y="75" width="340" height="50" rx="5" ry="5" fill="#e6f7ff" stroke="#ccd"/>
+    <text x="450" y="95" font-family="Courier, monospace" font-size="14" fill="#0066cc">
+      <tspan x="450" y="95">Returns: 'user'</tspan>
+      <tspan x="450" y="115">Returns: 'example.com'</tspan>
+    </text>
+  </g>
+</svg>
