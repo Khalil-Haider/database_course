@@ -539,6 +539,7 @@ SELECT column(s) FROM tableB;
 - Similar data types.
 - Columns in the same order.
 
+
 ## Subqueries
 
 A **subquery** is a query nested within another SQL query.
@@ -740,8 +741,56 @@ $$;
 
 ![Store Procedure vs python code ](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/Stored_Procedures_Vs_python_code.PNG)
 
+
+
 # Window Functions
-```
+
+```markdown
 Window Functions work like GROUP BY but keep all rows visible
-using a window function prevents rows from being aggregated into a single output row
+
+Using a window function prevents rows from being aggregated into a single output row
+
 ```
+
+---
+
+## 🧠 Basic Syntax of a Window Function
+
+```sql
+SELECT column_name,
+       AGG_FUNCTION() OVER (PARTITION BY col ORDER BY col) AS new_column
+FROM table_name;
+````
+
+
+
+![Window function vs Group by](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/window%20function%20vs%20agg.PNG)
+
+---
+
+# Types of Window function
+
+---
+
+![Types of Window function ](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/types%20of%20window%20function.PNG)
+
+---
+
+# Window Function Animation
+
+---
+
+<video controls src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/WindowFunctionsAnimation.mp4" title="Window Function Animation"></video>
+
+
+
+## ✅ Tip:
+
+Use window functions when you want row-level visibility **with aggregate-style power**, 
+
+such as running totals, ranks, and percentiles.
+
+
+```
+
+
