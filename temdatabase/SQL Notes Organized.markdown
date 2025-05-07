@@ -539,6 +539,9 @@ SELECT column(s) FROM tableB;
 - Similar data types.
 - Columns in the same order.
 
+# Union vs Join
+
+![Union vs Join](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/union%20vs%20join.PNG)
 
 ## Subqueries
 
