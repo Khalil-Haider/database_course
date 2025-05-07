@@ -582,3 +582,159 @@ SELECT * FROM view1;
 
 ![view](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/view.png)
 
+---
+
+## 📌 What is an Index?
+
+- An **index** improves database performance by allowing faster retrieval of specific rows.
+- It organizes data to speed up queries but can **slow down** data modification operations if overused.
+
+---
+
+
+# Guidelines for Using Indexes in PostgreSQL
+
+## 📌 General Guidelines
+
+- **Primary Keys and Unique Constraints**:  
+  PostgreSQL automatically creates indexes for `PRIMARY KEY` and `UNIQUE` columns.
+
+- **Frequent Retrieval Columns**:  
+  Create indexes on columns that are often used in `SELECT` queries to retrieve data.
+
+- **Join Columns**:  
+  Index the columns that are commonly used in `JOIN` operations to improve join performance.
+
+- **Avoid High NULL Columns**:  
+  Avoid creating indexes on columns that have too many `NULL` values, as it can degrade performance.
+
+- **Small Tables**:  
+  Small tables generally **do not** require indexes because full table scans are already fast.
+
+- **Performance Balance**:  
+  Indexes speed up data retrieval but add overhead to `INSERT`, `UPDATE`, and `DELETE` operations.  
+  ➔ **Use indexes sensibly** to maintain overall database performance.
+
+
+
+## 📌 Description of `CREATE INDEX`
+
+| Topic | Details |
+|:-----|:--------|
+| **Purpose** | Enhance database performance by creating fast lookup structures. |
+| **Syntax** | `CREATE INDEX index_name ON table_name (column_name);` |
+| **Multiple Columns** | Index can be created on multiple columns if the method supports it. |
+| **Expression Indexes** | You can create indexes based on expressions like `UPPER(column_name)`. |
+| **Partial Indexes** | Use a `WHERE` clause to create an index on a subset of table data. |
+| **Index Methods** | PostgreSQL supports `B-tree`, `Hash`, `GiST`, and `GIN` index types. |
+| **Restrictions** | - `WHERE` clause can't use subqueries or aggregate functions. <br> - Functions used must be **IMMUTABLE** (outputs depend only on inputs). |
+
+---
+
+## 📌 Example Queries
+
+### 1. Create a simple index
+```sql
+CREATE INDEX idx_student_name ON student(name);
+
+```
+
+# Video: Database Indexing
+
+<video src="https://github.com/Khalil-Haider/database_course/raw/main/assets_image/DatabaseSearchComparison.mp4" controls width="600"></video>
+
+# 📚 Stored Procedures in SQL
+
+## 📌 What is a Stored Procedure?
+
+A **Stored Procedure** in SQL is a collection of SQL statements that are **saved** and **stored** inside the database.  
+It is used to perform a sequence of operations like:
+
+- Querying data
+- Inserting data
+- Updating data
+- Deleting data
+
+Unlike regular SQL queries (which run one command at a time), a stored procedure encapsulates multiple SQL statements together, allowing you to **reuse** and **simplify** your database operations.
+
+---
+
+## 📌 Benefits of Using Stored Procedures
+
+- **🔄 Code Reusability**:  
+  Create once, call multiple times — reduces repetition of SQL code.
+
+- **⚡ Enhanced Performance**:  
+  Stored procedures are **precompiled** and stored on the server, making execution faster by reducing network communication and compilation time.
+
+- **🔒 Security**:  
+  You can allow users to **execute** a stored procedure without giving them direct access to database tables — improving **data protection**.
+
+---
+
+## 📌 Syntax of Stored Procedure (PostgreSQL Example)
+
+```sql
+CREATE OR REPLACE PROCEDURE procedure_name(parameters)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+   -- SQL statements here
+END;
+$$;
+
+```
+
+
+
+# 📚 Query vs Stored Procedure
+
+| Feature            | Query | Stored Procedure |
+|--------------------|:-----:|:----------------:|
+| **Definition**      | One-time SQL request for data or updates. | Reusable, precompiled block of SQL stored in the database. |
+| **Usage**           | Simple and great for quick, ad-hoc tasks. | Secure and consistent for repetitive tasks. |
+| **Performance**     | Slower: Processed fresh every time. | Faster: Already optimized by the database. |
+
+---
+
+## 📌 Summary
+
+- **Query**:  
+  - Good for one-time, quick, or simple tasks.  
+  - Each execution is processed individually.
+
+- **Stored Procedure**:  
+  - Best for repetitive, secured, and performance-critical operations.  
+  - Stored, precompiled, and optimized by the database.
+
+
+
+
+# 🚀 Stored Procedure vs Python Code
+
+| Feature            | Stored Procedure | Python Code |
+|--------------------|:----------------:|:-----------:|
+| **Performance**     | Faster because they’re precompiled. | Executes SQL dynamically (slightly slower). |
+| **Flexibility**     | Limited to database operations. | Highly flexible — APIs, advanced logic, multiple databases. |
+| **Version Control** | Hard to version control directly. | Easily fits into Git and other tools. |
+| **Maintenance**     | Updating requires modifying the database. | Updating is simpler with modern coding tools. |
+| **Complex Logic**   | Good for basic to moderate database tasks. | Excellent for complex logic and workflows using rich libraries. |
+
+---
+
+## 📌 Wrapping Up
+
+- **Stored Procedures**:  
+  - ✅ Fast  
+  - ✅ Secure  
+  - ❌ Less flexible  
+  - ❌ Harder to maintain and version
+
+- **Python Code**:  
+  - ✅ Highly flexible and powerful  
+  - ✅ Easy to maintain, update, and version  
+  - ❌ Slightly slower compared to stored procedures
+
+---
+
+
