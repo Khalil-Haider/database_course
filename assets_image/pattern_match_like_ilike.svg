@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" rx="15" ry="15"/>
+  
+  <!-- Title -->
+  <g transform="translate(400, 45)">
+    <text font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#336791" text-anchor="middle">PostgreSQL: LIKE vs ILIKE</text>
+  </g>
+  
+  <!-- PostgreSQL Elephant Icon -->
+  <g transform="translate(60, 40)">
+    <path d="M30,10 C13.4,10 0,20.6 0,33.7c0,8.9 6.1,16.8 15.5,21.5c3.8,1.9 8.1,3.1 12.6,3.5c0.4,0.1 0.7,0.1 1.1,0.1c1.2,0 2.3-0.2 3.1-0.8c0.5-0.3 0.9-0.8 1.2-1.5c0.3-0.6 0.3-1.9 0.3-2.7l-0.1-2.2c-8.6,1.8-10.2-1.1-10.9-1.9c-0.8-1.5-1.9-1.9-1.9-1.9c-1.5-1 0.1-1 0.1-1c1.7,0.1 2.6,1.7 2.6,1.7c1.5,2.6 4,1.8 5,1.4c0.3-1.1 0.6-1.8 1.1-2.3c-7.4-0.8-15.3-3.7-15.3-16.5c0-3.6 1.3-6.6 3.4-8.9c-0.3-0.8-1.5-4.2 0.3-8.7c0,0 2.8-0.9 9.1,3.4c2.6-0.7 5.5-1.1 8.3-1.1c2.8,0 5.7,0.4 8.3,1.1c6.3-4.3 9.1-3.4 9.1-3.4c1.8,4.5 0.7,7.9 0.3,8.7c2.1,2.3 3.4,5.3 3.4,8.9c0,12.8-7.8,15.7-15.3,16.5c0.6,0.5 1.2,1.5 1.2,3.1c0,2.2 0,4 0,4.6c0,0.8 0.2,1.7 0.7,2.3c0.5,0.5 1.3,0.8 2.3,0.8c0.8,0 1.6-0.1 2.4-0.3c10.8-3.6 18.6-13.9 18.6-25.9C60,20.6 46.6,10 30,10z" fill="#336791"/>
+  </g>
+  
+  <!-- Cards Container -->
+  <g transform="translate(50, 100)">
+    <!-- LIKE Card -->
+    <g transform="translate(0, 0)">
+      <rect width="340" height="450" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2"/>
+      
+      <!-- Header -->
+      <rect width="340" height="60" rx="10" ry="10" fill="#336791"/>
+      <text x="170" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">LIKE Operator</text>
+      
+      <!-- Description -->
+      <text x="20" y="85" font-family="Arial, sans-serif" font-size="16" fill="#333">
+        <tspan x="20" y="85">• Case-sensitive pattern matching</tspan>
+        <tspan x="20" y="110">• Used in WHERE clauses</tspan>
+        <tspan x="20" y="135">• Standard SQL syntax</tspan>
+      </text>
+      
+      <!-- Examples -->
+      <text x="20" y="175" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#336791">Examples:</text>
+      
+      <!-- Example 1 -->
+      <rect x="20" y="190" width="300" height="70" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+      <text x="30" y="215" font-family="Courier, monospace" font-size="14" fill="#333">
+        <tspan x="30" y="215">SELECT * FROM users</tspan>
+        <tspan x="30" y="240">WHERE name LIKE 'John%'</tspan>
+      </text>
+      
+      <!-- Result 1 -->
+      <text x="20" y="280" font-family="Arial, sans-serif" font-size="16" fill="#333">
+        <tspan x="20" y="280">Result: Matches "John", "Johnny"</tspan>
+        <tspan x="20" y="300">Does NOT match "john", "JOHN"</tspan>
+      </text>
+      
+      <!-- Example 2 -->
+      <rect x="20" y="320" width="300" height="70" rx="5" ry="5" fill="#f0f4f8" stroke="#ccd"/>
+      <text x="30" y="345" font-family="Courier, monospace" font-size="14" fill="#333">
+        <tspan x="30" y="345">SELECT * FROM products</tspan>
+        <tspan x="30" y="370">WHERE category LIKE '_ood'</tspan>
+      </text>
+      
+      <!-- Result 2 -->
+      <text x="20" y="410" font-family="Arial, sans-serif" font-size="16" fill="#333">
+        <tspan x="20" y="410">Result: Matches "Food", "Wood"</tspan>
+        <tspan x="20" y="430">Does NOT match "food", "FOOD"</tspan>
+      </text>
+    </g>
+    
+    <!-- ILIKE Card -->
+    <g transform="translate(360, 0)">
+      <rect width="340" height="450" rx="10" ry="10" fill="white" stroke="#6c5b7b" stroke-width="2"/>
+      
+      <!-- Header -->
+      <rect width="340" height="60" rx="10" ry="10" fill="#6c5b7b"/>
+      <text x="170" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">ILIKE Operator</text>
+      
+      <!-- Description -->
+      <text x="20" y="85" font-family="Arial, sans-serif" font-size="16" fill="#333">
+        <tspan x="20" y="85">• Case-insensitive pattern matching</tspan>
+        <tspan x="20" y="110">• PostgreSQL extension (non-standard)</tspan>
+        <tspan x="20" y="135">• Same wildcards as LIKE</tspan>
+      </text>
+      
+      <!-- Examples -->
+      <text x="20" y="175" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#6c5b7b">Examples:</text>
+      
+      <!-- Example 1 -->
+      <rect x="20" y="190" width="300" height="70" rx="5" ry="5" fill="#f7f2fa" stroke="#ccd"/>
+      <text x="30" y="215" font-family="Courier, monospace" font-size="14" fill="#333">
+        <tspan x="30" y="215">SELECT * FROM users</tspan>
+        <tspan x="30" y="240">WHERE name ILIKE 'john%'</tspan>
+      </text>
+      
+      <!-- Result 1 -->
+      <text x="20" y="280" font-family="Arial, sans-serif" font-size="16" fill="#333">
+        <tspan x="20" y="280">Result: Matches "John", "john",</tspan>
+        <tspan x="20" y="300">"JOHN", "Johnny", "johnny"</tspan>
+      </text>
+      
+      <!-- Example 2 -->
+      <rect x="20" y="320" width="300" height="70" rx="5" ry="5" fill="#f7f2fa" stroke="#ccd"/>
+      <text x="30" y="345" font-family="Courier, monospace" font-size="14" fill="#333">
+        <tspan x="30" y="345">SELECT * FROM products</tspan>
+        <tspan x="30" y="370">WHERE category ILIKE '_ood'</tspan>
+      </text>
+      
+      <!-- Result 2 -->
+      <text x="20" y="410" font-family="Arial, sans-serif" font-size="16" fill="#333">
+        <tspan x="20" y="410">Result: Matches "Food", "food",</tspan>
+        <tspan x="20" y="430">"FOOD", "Wood", "wood", "WOOD"</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- Wildcard Reference -->
+  <g transform="translate(400, 570)">
+    <text font-family="Arial, sans-serif" font-size="16" fill="#555" text-anchor="middle">
+      <tspan x="0" y="0">Wildcards: % (any characters) | _ (single character)</tspan>
+    </text>
+  </g>
+</svg>

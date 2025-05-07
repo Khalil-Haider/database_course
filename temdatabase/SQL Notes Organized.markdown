@@ -767,7 +767,7 @@ FROM table_name;
 
 
 
-![Window function vs Group by](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/window%20function%20vs%20agg.PNG)
+![Window function vs Group by](https://github.com/Khalil-Haider/database_course/raw/main/assets_image/window%20function%20complete.PNG)
 
 ---
 
